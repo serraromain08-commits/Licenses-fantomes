@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Licences Fantômes — Combien payez-vous de logiciels que personne n'utilise ?</title>
+<meta name="description" content="Un audit de vos abonnements logiciels : comptes inutilisés, doublons, coût par outil. Livré par email sous 48 h. Si on ne trouve aucune économie, vous ne payez pas.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Combien payez-vous de logiciels que personne n'utilise ?">
+<meta property="og:description" content="Audit de vos abonnements logiciels, livré par email sous 48 h. Aucune économie trouvée = vous ne payez pas.">
+<meta property="og:image" content="/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14201b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14201b;      /* vert-noir */
+  --accent:#e4572e;   /* vermillon */
+  --paper:#f6f3ec;
+  --line:#d9d4c7;
+  --mute:#5b665f;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:17px;padding-bottom:84px}
+h1,h2,h3{font-family:"Bricolage Grotesque",Georgia,serif;line-height:1.08;letter-spacing:-.02em}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+header{padding:18px 0;border-bottom:1px solid var(--line)}
+.logo{font-family:"Bricolage Grotesque",Georgia,serif;font-weight:800;font-size:18px;letter-spacing:-.01em}
+.logo span{color:var(--accent)}
+.hero{padding:44px 0 36px}
+h1{font-size:clamp(34px,9vw,52px);font-weight:800}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{margin-top:18px;font-size:19px;color:var(--mute)}
+.btn{display:block;width:100%;text-align:center;background:var(--accent);color:#fff;font-weight:700;font-size:18px;padding:18px 20px;border:0;border-radius:10px;text-decoration:none;cursor:pointer;min-height:56px;font-family:inherit}
+.btn:active{transform:translateY(1px)}
+.hero .btn{margin-top:26px}
+.sub{margin-top:10px;font-size:14px;color:var(--mute);text-align:center}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,7vw,34px);font-weight:800;margin-bottom:16px}
+.calc{background:var(--ink);color:var(--paper);border-radius:12px;padding:22px;margin-top:8px}
+.calc small{display:block;color:#aab5ae;font-size:13px;margin-bottom:12px}
+.calc ul{list-style:none;padding:0}
+.calc li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #2c3a33}
+.calc li:last-child{border:0;padding-top:14px;font-weight:700;font-size:20px;color:#ffb199}
+.benefits{display:grid;gap:14px}
+.benefits div{border-left:4px solid var(--accent);padding:2px 0 2px 14px}
+.benefits strong{display:block;font-size:18px}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:14px}
+.steps li{counter-increment:s;padding-left:46px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-weight:700}
+.guarantee{background:#fff;border:2px solid var(--ink);border-radius:12px;padding:20px}
+.guarantee strong{font-family:"Bricolage Grotesque",Georgia,serif;font-size:22px;display:block;margin-bottom:6px}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{font-weight:700;cursor:pointer;list-style:none;min-height:28px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--accent);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:8px;color:var(--mute)}
+form{display:grid;gap:12px}
+label{font-weight:700;font-size:15px}
+input[type=email],input[type=text]{width:100%;font-size:18px;padding:15px 14px;border:2px solid var(--ink);border-radius:10px;background:#fff;font-family:inherit;min-height:54px}
+input:focus{outline:3px solid var(--accent);outline-offset:1px}
+.hp{position:absolute;left:-9999px}
+.note{font-size:13px;color:var(--mute)}
+#merci{display:none;background:#fff;border:2px solid var(--ink);border-radius:12px;padding:20px}
+footer{padding:28px 0 20px;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+footer a{color:var(--mute);margin-right:14px}
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding:12px 20px calc(12px + env(safe-area-inset-bottom));z-index:5}
+.sticky .btn{max-width:600px;margin:0 auto;padding:15px}
+@media(min-width:760px){.sticky{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><div class="logo">Licences<span>Fantômes</span></div></div></header>
+
+<main class="wrap">
+
+<div class="hero">
+  <h1>Combien payez-vous de logiciels que <em>personne n'utilise</em> ?</h1>
+  <p class="lead">Je passe en revue vos abonnements, je repère les comptes inutilisés et les doublons, et je vous envoie la liste chiffrée par email sous 48 h.</p>
+  <a class="btn" href="#formulaire">Commencer, c'est gratuit</a>
+  <p class="sub">Aucune carte bancaire demandée.</p>
+</div>
+
+<section>
+  <h2>La facture monte, personne n'a décidé</h2>
+  <p>Chaque service souscrit ses outils dans son coin. Un salarié part, son compte reste payé. Deux équipes paient deux logiciels qui font la même chose. Et personne n'a la liste complète.</p>
+  <div class="calc" style="margin-top:20px">
+    <small>Exemple fictif, pour donner un ordre de grandeur</small>
+    <ul>
+      <li><span>3 comptes d'anciens salariés à 25 €/mois</span><span>900 €/an</span></li>
+      <li><span>2 outils de visio qui se doublonnent</span><span>1 440 €/an</span></li>
+      <li><span>1 abonnement oublié à 60 €/mois</span><span>720 €/an</span></li>
+      <li><span>Gaspillé sur l'année</span><span>3 060 €</span></li>
+    </ul>
+  </div>
+  <p class="note" style="margin-top:10px">Vos chiffres réels seront différents. C'est justement ce que l'audit révèle.</p>
+</section>
+
+<section>
+  <h2>Ce que vous recevez</h2>
+  <div class="benefits">
+    <div><strong>La liste complète de vos abonnements</strong>Enfin un endroit où tout est écrit, outil par outil.</div>
+    <div><strong>Le coût annuel, par outil et par personne</strong>Vous voyez où part l'argent, sans tableur à construire.</div>
+    <div><strong>Les comptes inutilisés et les doublons</strong>Ce que vous pouvez résilier dès demain, avec l'économie en euros.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Comment ça se passe</h2>
+  <ol class="steps">
+    <li><strong>Vous laissez votre email.</strong> Une minute, rien d'autre.</li>
+    <li><strong>Vous m'envoyez vos relevés</strong> (bancaires ou de facturation). Je vous explique comment, simplement.</li>
+    <li><strong>Vous recevez l'audit sous 48 h</strong>, avec les économies chiffrées et les actions à faire.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="guarantee">
+    <strong>Aucune économie trouvée ? Vous ne payez rien.</strong>
+    Je démarre par un petit nombre d'entreprises. Si l'audit ne repère aucune économie, il ne vous coûte rien, et vous pouvez écrire pour tout arrêter à tout moment.
+  </div>
+</section>
+
+<section>
+  <h2>Questions fréquentes</h2>
+  <details><summary>Est-ce que ça marche pour mon entreprise ?</summary><p>L'audit est pensé pour les entreprises de 10 à 100 personnes, sans service informatique dédié, là où personne ne suit les abonnements.</p></details>
+  <details><summary>Combien de temps ça me prend ?</summary><p>Environ 15 minutes de votre côté, pour m'envoyer vos relevés. Le reste, c'est mon travail.</p></details>
+  <details><summary>Et si je veux arrêter ?</summary><p>Vous écrivez un email et c'est terminé. Pas d'engagement, aucune démarche compliquée.</p></details>
+  <details><summary>À quoi sert exactement ce que je paie ?</summary><p>À obtenir une liste claire de vos abonnements, de ce qu'ils coûtent, et de ce que vous pouvez résilier. La tarification vous est annoncée avant tout paiement.</p></details>
+</section>
+
+<section id="formulaire">
+  <h2>Recevez votre audit</h2>
+  <form id="f" action="https://formspree.io/f/REMPLACER_PAR_VOTRE_ID" method="POST">
+    <label for="email">Votre email professionnel</label>
+    <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="prenom@entreprise.fr">
+    <label for="taille">Nombre de personnes dans l'entreprise</label>
+    <input id="taille" name="taille" type="text" inputmode="numeric" placeholder="Exemple : 25">
+    <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn" type="submit">Commencer, c'est gratuit</button>
+    <p class="note">Votre email sert uniquement à vous envoyer l'audit et à vous prévenir de l'ouverture. Voir la <a href="/confidentialite.html">politique de confidentialité</a>.</p>
+  </form>
+  <div id="merci"><strong>C'est noté, merci.</strong><br>Je vous écris très vite avec la marche à suivre. Pensez à regarder vos courriers indésirables.</div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <a href="/confidentialite.html">Confidentialité</a><a href="/confidentialite.html#mentions">Mentions légales</a>
+  <p style="margin-top:10px">Licences Fantômes — [RAISON SOCIALE À COMPLÉTER]</p>
+</div></footer>
+
+<div class="sticky"><a class="btn" href="#formulaire">Commencer, c'est gratuit</a></div>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=this,d=new FormData(f);
+  fetch(f.action,{method:'POST',body:d,headers:{Accept:'application/json'}})
+  .then(function(r){
+    if(r.ok){f.style.display='none';document.getElementById('merci').style.display='block'}
+    else{alert("L'envoi n'a pas fonctionné. Réessayez dans un instant.")}
+  }).catch(function(){alert("Problème de connexion. Réessayez dans un instant.")});
+});
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
